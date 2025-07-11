@@ -4,8 +4,8 @@ print("Floor of 8.9999 is", floor(8.9999))
 print("Ceil of 9.0001 is", ceil(9.0001))
 print("Random Number [1-100]:",randint(1, 100))
 
-from test import Pout # importing function from other file
-from test import take_list as listing # renaming the function for here
+from testModule import Pout # importing function from other file
+from testModule import take_list as listing # renaming the function for here
 Pout("An outsider Function")
 listing(1,3,5,7,9)
 
