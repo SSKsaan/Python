@@ -2,7 +2,9 @@
 triple double-quotations for multi-line comment """
 
  #! Output
-print("Hello Python")
+print("Hello Python") # adds a line break by default
+print("This is the", end=' ') # specifying line end to not add line break
+print("S", "T", "A", "R", "T", sep='-') # specifying separator
 
  #! Variable
 # format: "variable-name = value" (detects type automatically based on value)
@@ -12,10 +14,11 @@ fact = True
 words = 'Anything & Everything'
 line = f"A number {number} is not {fraction} or {words}..."
 # using f"..." to use other variables inside a string variable
-print(line) # adds a line break by default
+print(line)
 print(number + fraction) # direct arithmatic operation
-print(number,fraction) # comma adds a space by default
-print("Let's say"  ,  words+'!') # spacing before/after comma/quotes/variable does't matter 
+print(number,fraction) # comma adds a space in between by default
+print("Let's say"  ,  words+'!') # plus appends strings
+# spacing before/after comma/quotes/variable does't matter 
 print(type(fact)) # checking data type of a variable
 
  #! Input
@@ -32,4 +35,3 @@ n1 = int(n1) # overriding variable & then typecasting
 n3 = float(n2) # making new varible to typecast
 print(n1,'+',n3,'=',n1+n3)
 print(n1,'+',n3,'=',str(n1)+str(n3)) # typecast without changing/assigning variable
-

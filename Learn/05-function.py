@@ -1,14 +1,23 @@
+ #! Built-in Functions:
+print(max(1, 88, 22, 99, 5)) # gives the maximum value
+print(min(99, 5, 22, 1, 88)) # gives the minimum value
+# can also pass an array as parameter in min & max as well
+print(len([9, 8, 6])) # counts the length of array/list
+print(sum({1,2,3,4,5})) # calculates the sum of list/array
+print(abs(10-100)) # return the absolute value (+ve)
+
+ #! Basic Functions:
 def func(num): print(num)
 func(10)
 
 # Function format >> def name(parameters): [indent] statements...
-def Sum(a, b):
+def Addition(a, b):
     ans = a + b
     return ans # returns the value, type is automatic
 
-num = func(Sum(8,80))
+num = func(Addition(8,80))
 print(num) # if nothing's returned it's 'none' by default
-num = Sum(80,8)
+num = Addition(80,8)
 func(num) ;print()
 
  #! Arguments / Optional Parameters:
