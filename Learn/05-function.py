@@ -6,7 +6,7 @@ print(len([9, 8, 6])) # counts the length of array/list
 print(sum({1,2,3,4,5})) # calculates the sum of list/array
 print(abs(10-100)) # return the absolute value (+ve)
 
- #! Basic Functions:
+ #! Creating Basic Functions:
 def func(num): print(num)
 func(10)
 
@@ -18,7 +18,7 @@ def Addition(a, b):
 num = func(Addition(8,80))
 print(num) # if nothing's returned it's 'none' by default
 num = Addition(80,8)
-func(num) ;print()
+func(num) ; print()
 
  #! Arguments / Optional Parameters:
 def show(n1, n2, n3, n4=0, n5=0): print(n1,n2,n3,n4,n5)
@@ -28,13 +28,13 @@ show(4, 3, 2, 1)
 def dump_any(*args): # tuple (*something) is like a list
     print(args) # prints the whole tuple in () separated by comma
     for i in args: print(i)
-    # tuple can be iterated like with loop like other lists
+    # tuple can be iterated with loop like other lists
 dump_any(10, 20, 30) # tuple will take any number of parameter
 
 def dump_some(p1, p2, *args):
     print(args) # tuple is like optional parameter, it may get none
     print(p1, p2) # but fixed parameters like these must be given
-dump_some(40,50) ;print()
+dump_some(40,50) ; print()
 
  #! Key arguments:
 def full_name(first, last): print(f"Full Name: {first} {last}")
@@ -47,7 +47,7 @@ def key_it(k1, k2, *args, **kargs):
     # iterate through kargs to get pairs of (key,value) from it:
     for k, v in kargs.items(): print(k +" = "+ v)
 # kargs(**) take any number of parameters but with key(like index of map)
-key_it('A', 'B', 'c', xtra1='C', xtra2='D') ;print()
+key_it('A', 'B', 'c', xtra1='C', xtra2='D') ; print()
 
  #! Return multiple:
 def return_all(a, b):
@@ -76,7 +76,7 @@ def check_scope(key, val):
 
 check_scope('item', 10)
 # print(key, val, relation) # won't work as those are local to their function
-print("Final: ", known) ;print()
+print("Final: ", known) ; print()
 
  #! Lambda (shorthand function):
 def add(a,b):

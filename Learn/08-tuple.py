@@ -12,7 +12,7 @@ print(f"[Total: {len(Tupl)}]") # shows the size of tuple
 
 def ReturnMultuple(n):
     return n, n+1, n+2
-# function returns multiples separated by , or inside() as tuple
+# function returns multiples separated by `,` inside `()` as tuple
 print("Returned as Tuple:",ReturnMultuple(1))
 
 # Tuple can be a list of different types of variables/lists
@@ -31,4 +31,4 @@ print('0 found at Index', i)
 if 10 in Tupl[1:7]: # if not found, index() would've thrown error
     print('0 found at Index', Tupl.index(10, 1, 7)) # search in range
 # 2nd (starting index) & 3rd (ending index) parameters are optional
-else: print('10 is not Found, But Errors Avoided')
+else: print('10 is Not Found in Range, But Errors Avoided')

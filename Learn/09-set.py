@@ -14,16 +14,15 @@ set1.add(30) # adds an element randomly in the set, if not duplicate
 print("Set after Addition:", set1)
 set1.remove(2) # removes the element from set
 print("Set after Removal :", set1)
-set1.pop() # removes a random element from set
+removed = set1.pop() # removes a random element from set
 print("Set after Popping :", end=" ")
 for element in set1: # can be accessed in loop with 'in'
     print(element, end=" ")
 # check if specific element is in the set using 'in'
-if 15 not in set1: print("\t{Where did 15 go?}\n")
-else: print("\t{15 exists in the set}\n")
+if removed not in set1: print("\t{"+f"Where did {removed} go?"+"}\n")
 
 # can't access or modify set elements using index (position)
-# print(set1[1]) won't work
+# print(set1[1]) won't work as the order is random
 
 print(f"{set1} is subset of {set2}", end=": ")
 print(set1.issubset(set2)) # if all elements of left exist in right
@@ -59,4 +58,4 @@ print("Updated Union Set:", set4)
 set4.intersection_update(set5) # operation is same as intersection
 print("Updated Intersection Set:", set4)
 set4.difference_update(set5) # operation is same as difference
-print("Updated Difference Set:", set4, "\n")
+print("Updated Difference Set:", set4)

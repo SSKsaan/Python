@@ -69,7 +69,7 @@ copied3[5] = 10; # changes in the copied list doesn't affect the original
 print(f"Original: {numbers}\n Copied: {copied3}\n")
 # Deep copy exists but not going too Deep for now
 
- #! Comprehension / Shortcut (not recommended):
+ #! Comprehension / Shortcut :
 filtered = [] # empty list
 
 for n in numbers:

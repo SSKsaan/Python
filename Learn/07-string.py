@@ -68,7 +68,7 @@ partitions = input("Enter a few thing separated by comma: ").split(",",1)
 # 1st parameter is separator, 2nd parameter is maxsplit, both are optional
 print(partitions,"\n") # Actually, no. of splits = maxsplits+1
 # Separator specifies what splits the string, by default any whitespaces
-# maxsplits specifies no. of slits to do, by default -1(means all possible)
+# maxsplits specifies no. of splits to do, by default -1(means all possible)
 
 demoTxt = "This is San not san"
 print("Original:", demoTxt)
@@ -94,9 +94,14 @@ print('Centered:','SAN'.center(10,'-'))
 print('Centered:','SAmiNsadik'.center(10,'-')) ;print()
 # if original string size => given center size, the method doesn't apply
 
-demoTxt = "Hence, {name} gets {number} points"
-# atleast 1 {forrmattable} required
-print(demoTxt.format(name="'String'", number="[99]"), end =" ")
-# if there's no {keyword}, then format() doesn't need keyword aswell
-demoTxt = "out of {}.".format(100)
+demoTxt = "Hence, {name} gets {} points{mark}"
 print(demoTxt)
+# keyword args (keyword=value) must be after all non-keyword (positional) args
+print(demoTxt.format([99], "extra", mark="!", name='String'))
+# positional args will fill the {formattable} in order, extras will be ignored
+# keyword args don't need to be in order, but non-existing keywords will throw KeyError
+
+# atleast 1 {forrmattable} required in format() # print(demoTxt.format()) will throw KeyError
+demoTxt = "The End"
+print(demoTxt.format())
+# if there's no {}, then format() doesn't need keyword/formattable 

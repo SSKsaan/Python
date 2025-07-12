@@ -7,6 +7,10 @@ aMap = map(square, aList) # map takes a function & an iterable
 print(aMap) # by default returns a map object
 print(list(aMap)) # converting into list is standard to see
 
+# standard way to take a list of int inputs (input is string by default)
+nums = list(map(int, input('Input List: ').split()))
+print(f"List of {type(nums[0])}: {nums}")
+
  #! FILTER:
 # filter takes a boolean function & an iterable
 newList = filter(lambda x: x<50, aList) # used a lambra function

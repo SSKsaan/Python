@@ -35,4 +35,4 @@ print("Result =", sum, '\n')
 for i in range(5): print(i) # same as range(0,5)
 print() # starting value is 0 by default if not specified
 
- #* zip() function can loop over two or more sequences at the same time! 
+ #* zip() function can combine and loop over two or more sequences at the same time! 

@@ -31,4 +31,11 @@ for key in dic: print(key, end=' ')
 print("\nSpecial looping for Dictionary:")
 for (key, val) in dic.items(): print(key,'=',val)
 
- # TODO: How to search in a Dictionary
+print("\nFinding a specific 'key' in Dictionary:")
+if 'name' in dic: print(f"'name' = {dic['name']}") # throws KeyError if not found
+print(dic.get('key', 'Key Not Found')) # safer way to search in dictionary
+# get returns the key's value if found, else returns 2nd parameter
+# 2nd parameter is optional, by default returns 'None'
+
+if 'Sadik' in dic.values(): # searching for a specific value (case sensitive)
+    print("'Sadik' found in values") 
