@@ -43,6 +43,7 @@ print("lowerCASED: ", demoTxt.lower()) # lowercases whole string like casefold()
 print('Capitalized:', demoTxt.capitalize()) # capitalizes 1st letter
 print('And, Titled:', demoTxt.title()) # capitalizes 1st letter of each word
 # istitle() returns True if 1st letter of every word is capital
+print('Case Swapped:', demoTxt.swapcase()) # swaps case of whole string
 
 n1, n2= "123", "123 .00"
 if n1.isnumeric(): print(n1, 'is Numeric')
@@ -69,6 +70,7 @@ partitions = input("Enter a few thing separated by comma: ").split(",",1)
 print(partitions,"\n") # Actually, no. of splits = maxsplits+1
 # Separator specifies what splits the string, by default any whitespaces
 # maxsplits specifies no. of splits to do, by default -1(means all possible)
+print("Joining:", "---".join(partitions[1].split(","))) # joins an iterable by a "separator"
 
 demoTxt = "This is San not san"
 print("Original:", demoTxt)

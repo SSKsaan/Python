@@ -32,3 +32,7 @@ if 10 in Tupl[1:7]: # if not found, index() would've thrown error
     print('0 found at Index', Tupl.index(10, 1, 7)) # search in range
 # 2nd (starting index) & 3rd (ending index) parameters are optional
 else: print('10 is Not Found in Range, But Errors Avoided')
+
+print(sorted(Tupl)) # sorts the tuple and returns a list
+Tuple =  tuple(sorted(Tupl, key=lambda x: -x)) # optional sorting logic
+print(Tuple) # sorts the tuple and returns a tuple (desc order)

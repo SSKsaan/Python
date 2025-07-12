@@ -44,8 +44,9 @@ else: print("10 is not in the list\n")
 numbers.reverse()
 print(f"Reversed List: {numbers}")
 
-numbers.sort()
+numbers.sort() # sorts the original list
 print(f"Sorted   List: {numbers}")
+print(f"Sorted   List: {sorted(numbers)}") # returns a new sorted list
 
 cents = numbers.count(100) # counts the no. of given value in the list
 print(f"100 appeared {cents} times in the list!")

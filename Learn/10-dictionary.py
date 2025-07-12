@@ -39,3 +39,13 @@ print(dic.get('key', 'Key Not Found')) # safer way to search in dictionary
 
 if 'Sadik' in dic.values(): # searching for a specific value (case sensitive)
     print("'Sadik' found in values") 
+
+# Sorting:
+print("Sorted Dictionary Keys:", sorted(dic)) # returns new list, in ascending order
+print("Reversed Sorted Dictionary:", sorted(dic.items(), reverse=True))
+print("Sorted Dictionary Values:", sorted(dic.values()))
+# getting full dict sorted by values, using optional key parameter:
+print("Custom Sorted Dictionary:", sorted(dic.items(), key=lambda x: x[1]))
+
+# Dictionary Comprehension:
+print("Dictionary Comprehension:", {x: x**2 for x in range(1,11)})

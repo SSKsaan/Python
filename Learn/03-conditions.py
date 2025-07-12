@@ -39,3 +39,7 @@ if not flag: # same as, if !flag:
     print('End of Nest')
 else: print('No Nest')
 print('------------')
+
+ #! Shorthand if-else
+s = 'Shorthand' if a>=1 else None # else is mandatory
+print(s if a>=1 else 'Normal' , 'if-else') # can be used inside
