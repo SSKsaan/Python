@@ -42,4 +42,6 @@ print('------------')
 
  #! Shorthand if-else
 s = 'Shorthand' if a>=1 else None # else is mandatory
-print(s if a>=1 else 'Normal' , 'if-else') # can be used inside
+# for if-elif-else oneliner:
+print(s if a>=1 else 'Normal' if not a else 'Weird' , 'if-else')
+# format: result if condition ... else elif-result if elif-condition ... else else-result

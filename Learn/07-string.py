@@ -30,9 +30,14 @@ if 'not' in text3[25:]: # can search in specific portion
     print('not here')
 else: print('no not here')
 
- #! Appending w/o Method:
-text1 = text1 + " is " + text2
-print(text1, "\n")
+ #! Mutating / Modifying:
+# string is immutable, can't be changed like str[i] = val
+text1 = list(text1) # *Method 1: Using List
+text1[0], text1[-4:] = "X", "COD3" # List is mutable
+text1 = "".join(text1) # joins an iterable by a "separator"
+print(text1) # used for modifying at specific positions
+text1 = text1[:6] + "$$$" + text1[7:] # *Method 2: Using Slicing & Concatenation
+print(text1, "\n") # also called appending (without a Method)
 
  #! Common Methods:
 demoTxt = "thiS iS a DeMo"
@@ -67,10 +72,10 @@ demoTxt = "Samin Sadik, Khan, San"
 print(demoTxt,'->',demoTxt.split()) # splits the string
 partitions = input("Enter a few thing separated by comma: ").split(",",1)
 # 1st parameter is separator, 2nd parameter is maxsplit, both are optional
-print(partitions,"\n") # Actually, no. of splits = maxsplits+1
+print(partitions) # Actually, no. of splits = maxsplits+1
 # Separator specifies what splits the string, by default any whitespaces
 # maxsplits specifies no. of splits to do, by default -1(means all possible)
-print("Joining:", "---".join(partitions[1].split(","))) # joins an iterable by a "separator"
+print("Joining:", "---".join(partitions[1].split(",")) , "\n") 
 
 demoTxt = "This is San not san"
 print("Original:", demoTxt)
