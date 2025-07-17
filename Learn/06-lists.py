@@ -17,8 +17,10 @@ print(numbers[2:]) # 2nd value is by default the last index
 print(numbers[::-1]) # shortcut to reverse the list
 
  #! Basic list methods:
+print('\nLength of', numbers, 'is', len(numbers)) # returns the length of list
+
 numbers.append(6) # inserts the value at the end of the list
-print('\nPost-Appended List:',numbers)
+print('Post-Appended List:',numbers)
 
 numbers.insert(1, 12) # 1st parameter index, 2nd parameter value
 # inserts value on the index, pushes from that index till the end to right

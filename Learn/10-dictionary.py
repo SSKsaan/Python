@@ -40,7 +40,7 @@ print(dic.get('key', 'Key Not Found')) # safer way to search in dictionary
 if 'Sadik' in dic.values(): # searching for a specific value (case sensitive)
     print("'Sadik' found in values") 
 
-# Sorting:
+# Sorting: (outputs as list)
 print("Sorted Dictionary Keys:", sorted(dic)) # returns new list, in ascending order
 print("Reversed Sorted Dictionary:", sorted(dic.items(), reverse=True))
 print("Sorted Dictionary Values:", sorted(dic.values()))
@@ -49,3 +49,8 @@ print("Custom Sorted Dictionary:", sorted(dic.items(), key=lambda x: x[1]))
 
 # Dictionary Comprehension:
 print("Dictionary Comprehension:", {x: x**2 for x in range(1,11)})
+
+# Counter (returns a dictionary of characters & their occurances)
+from collections import Counter
+print("Frequency Counter of a List:", Counter([2,1,2,1,3,1]))
+print("Frequency Counter of a String:", dict(Counter('212131')))
