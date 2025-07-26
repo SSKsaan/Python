@@ -42,7 +42,7 @@ class child_A(parent_A): # Multi-level inheritance
         print("At A-child's", end=" -> ")
     # instead of super(), a parent class can be specified to go
         Grandparent.__init__(self)
-    # in such case, self must be give among the required arguments
+    # in such case, self must be given among the required arguments
     
 class child_B(parent_A, parent_B): # Multiple inheritance
     def __init__(self):
@@ -53,12 +53,16 @@ class child_B(parent_A, parent_B): # Multiple inheritance
 # This combind "family tree"/inheritance is Hybrid inheritance
 
 print()  
+parent_A()
 fam1 = child_A()
-fam2 = child_B() #? why pB after pA instead of grand ?#
+fam2 = child_B()
+#? Python does not reinitialize any base class already handled as per MRO(Method Resolution Order)
+#? This avoids redundancy and maintains consistency in diamond or hybrid inheritance structures
+#? which is why Grandparen is not called twice — and after both parent_A and parent_B.
 print()
 
 
-# Interitance -> "is a" relation
+# Interitance -> "is a" relation 
 # Composition -> "has a" relation
 
 
